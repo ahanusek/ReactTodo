@@ -1,0 +1,25 @@
+.todo-container {
+	width: 50%;
+	margin: 100px auto;
+	background-color: #FAFAFA;
+}
+
+.todo-item {
+	padding: 10px 15px;
+	border: 1px solid #E0E0E0;
+	border-top: none;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	&:nth-of-type(1){
+		border-top: 1px solid #E0E0E0;
+	}
+	input {
+		display: inline-block;
+	}
+
+
+	.text {
+		margin: 0 15px 0;
+	}
+}
