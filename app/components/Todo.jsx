@@ -7,7 +7,7 @@ var Todo = React.createClass({
 		return (
 			<div className='todo-item'>
 				<input type="checkbox" />
-				<span className="text">{id}. {text}</span>
+				<span className="text">{text}</span>
 			</div>
 		)
 	}
