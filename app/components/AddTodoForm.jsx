@@ -1,12 +1,15 @@
 var React = require('react');
+var {connect} = require('react-redux');
+var actions = require('actions');
 
-var AddTodoForm = React.createClass({
+export var AddTodoForm = React.createClass({
 	onAddTodo: function(e){
 		e.preventDefault();
+		var {dispatch} = this.props;
 		var newTodo = this.refs.newTodo.value;
 		newTodo = newTodo.trim();
 		if(typeof newTodo === "string" && newTodo.length > 0){
-			this.props.onFormSubmit(newTodo);
+			dispatch(actions.addTodo(newTodo));
 			this.refs.newTodo.value = "";
 		} else {
 			this.refs.newTodo.focus();
@@ -25,4 +28,6 @@ var AddTodoForm = React.createClass({
 });
 
 
-module.exports = AddTodoForm;
+
+
+export default connect()(AddTodoForm);
