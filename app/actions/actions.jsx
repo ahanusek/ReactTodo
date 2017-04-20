@@ -30,3 +30,10 @@ export var addTodo = (text) => {
 		text
 	}
 }
+
+export var addTodos = (todos) => {
+	return {
+		type: "ADD_TODOS",
+		todos
+	}
+}
